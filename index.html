@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무학초등학교 5학년 1반 학급 누리집</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Noto Sans KR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        },
+                        amberCustom: {
+                            50: '#fffbebe',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-xl shadow-md">
+                        🌱
+                    </div>
+                    <div>
+                        <span class="text-xs text-emerald-600 font-semibold block">꿈과 희망이 자라는</span>
+                        <h1 class="text-lg font-bold text-slate-900 leading-tight">무학초등학교 <span class="text-emerald-600">5학년 1반</span></h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#vision" class="hover:text-emerald-600 transition">학급 비전</a>
+                    <a href="#meal" class="hover:text-emerald-600 transition">오늘의 급식</a>
+                    <a href="#notice" class="hover:text-emerald-600 transition">알림장</a>
+                    <a href="#schedule" class="hover:text-emerald-600 transition">시간표</a>
+                    <a href="#teacher" class="hover:text-emerald-600 transition">담임 교사</a>
+                </div>
+                <button onclick="scrollToMeal()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-sm transition flex items-center gap-2">
+                    <i class="fa-solid font-bold fa-utensils"></i> 오늘의 급식
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="relative bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 px-4 sm:px-6 lg:px-8 overflow-hidden shadow-inner">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold mb-4 tracking-wide uppercase">
+                2026학년도 5학년 1반 학급 누리집
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+                서로 존중하고 함께 성장하는 <br class="hidden sm:inline"/> 행복한 5학년 1반
+            </h2>
+            <p class="text-emerald-100 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+                훈제쌤과 함께 탐구하고, 도전하며, 다정하게 따뜻한 추억을 만들어가는 우리들의 보금자리입니다.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12 flex-grow">
+
+        <!-- 학급 비전 및 추구하는 인간상 Section -->
+        <section id="vision" class="scroll-mt-20">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-slate-900 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-compass text-emerald-600"></i> 학급 비전 & 추구하는 인간상
+                </h3>
+                <p class="text-slate-500 text-sm mt-1">우리 반이 가슴에 품고 나아갈 방향입니다.</p>
+            </div>
+
+            <!-- Vision Card -->
+            <div class="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl p-6 sm:p-8 text-white shadow-xl mb-8 relative overflow-hidden">
+                <div class="relative z-10 text-center max-w-3xl mx-auto">
+                    <span class="text-emerald-200 text-xs font-bold tracking-widest uppercase">CLASS VISION</span>
+                    <h4 class="text-2xl sm:text-3xl font-extrabold mt-2 mb-4">"스스로 생각하고, 다 함께 포용하며, 내일을 향해 도전하는 어린이"</h4>
+                    <p class="text-emerald-100 text-sm sm:text-base leading-relaxed">
+                        실패를 두려워하지 않는 용기와 서로의 차이를 인정하는 넓은 마음으로 날마다 조금씩 단단해지는 5학년 1반을 만듭니다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 4대 추구 인간상 Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1. 자주적인 사람 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h5 class="text-lg font-bold text-slate-900 mb-2">자주적인 어린이</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        내 일은 스스로 결정하고 책임질 줄 알며, 자기 주도적으로 학습하고 생활하는 어린이
+                    </p>
+                </div>
+
+                <!-- 2. 창의적인 사람 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h5 class="text-lg font-bold text-slate-900 mb-2">창의적인 어린이</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        호기심을 갖고 다양한 각도에서 문제를 바라보며 새로운 가치를 탐구하는 어린이
+                    </p>
+                </div>
+
+                <!-- 3. 교양 있는 사람 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h5 class="text-lg font-bold text-slate-900 mb-2">배려하는 어린이</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        친구의 의견을 경청하고 감정에 공감하며, 다정함과 따뜻함을 나누는 친절한 어린이
+                    </p>
+                </div>
+
+                <!-- 4. 더불어 사는 사람 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h5 class="text-lg font-bold text-slate-900 mb-2">협력하는 어린이</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        공동체의 규칙을 준수하고, 힘을 모아 더 큰 결과를 만들어낼 줄 아는 지혜로운 어린이
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 급식 API & 담임 교사 섹션 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- 공공 API 급식 정보 (2 Columns) -->
+            <section id="meal" class="lg:col-span-2 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm scroll-mt-20">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-md">NEIS 공공API 연동</span>
+                            <span class="text-xs text-slate-400">경남 무학초등학교 기준</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1 flex items-center gap-2">
+                            <i class="fa-solid fa-utensils text-emerald-600"></i> 오늘의 식단 안내
+                        </h3>
+                    </div>
+                    <!-- Date Picker -->
+                    <div class="flex items-center gap-2">
+                        <input type="date" id="mealDate" class="border border-slate-300 rounded-xl px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 font-medium text-slate-700">
+                        <button onclick="fetchMealData()" class="bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-xl text-sm font-medium transition flex items-center gap-1">
+                            <i class="fa-solid fa-magnifying-glass text-xs"></i> 조율
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Meal Result Container -->
+                <div id="mealContainer" class="min-h-[220px] flex flex-col justify-center">
+                    <!-- Loading state initialized by JS -->
+                    <div class="text-center py-8 text-slate-400">
+                        <i class="fa-solid fa-circle-notch fa-spin text-2xl mb-2 text-emerald-600"></i>
+                        <p class="text-sm">급식 정보를 불러오는 중입니다...</p>
+                    </div>
+                </div>
+
+                <!-- Nutritional Info / Disclaimer -->
+                <div class="mt-6 bg-slate-50 rounded-2xl p-4 text-xs text-slate-500 space-y-1">
+                    <p class="font-semibold text-slate-600"><i class="fa-solid fa-circle-info text-emerald-600"></i> 알레르기 유발물질 안내</p>
+                    <p>1.난류 2.우유 3.메밀 4.땅콩 5.대두 6.밀 7.고등어 8.게 9.새우 10.돼지고기 11.복숭아 12.토마토 13.아황산류 14.호두 15.닭고기 16.쇠고기 17.오징어 18.조개류(굴,전복,홍합 포함) 19.잣</p>
+                </div>
+            </section>
+
+            <!-- 담임 교사 프로필 (1 Column) -->
+            <section id="teacher" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between scroll-mt-20">
+                <div>
+                    <div class="text-center pb-6 border-b border-slate-100">
+                        <div class="relative w-28 h-28 mx-auto mb-4">
+                            <div class="w-full h-full rounded-full bg-gradient-to-tr from-emerald-400 to-teal-500 p-1 shadow-md">
+                                <div class="w-full h-full bg-emerald-50 rounded-full flex items-center justify-center text-4xl">
+                                    👨‍🏫
+                                </div>
+                            </div>
+                            <span class="absolute bottom-0 right-1 bg-emerald-600 text-white text-xs font-bold px-2 py-0.5 rounded-full border-2 border-white">담임</span>
+                        </div>
+                        <h4 class="text-xl font-extrabold text-slate-900">훈제쌤 <span class="text-sm font-normal text-slate-500">(교사)</span></h4>
+                        <p class="text-xs text-emerald-600 font-medium mt-1">"함께 웃고 배우며 성장합시다!"</p>
+                    </div>
+
+                    <div class="py-6 space-y-4 text-sm">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-semibold block">교육 철학</span>
+                                <p class="text-slate-700 font-medium">단 한 명의 아이도 소외되지 않는 따뜻하고 안전한 교실 만들기</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-semibold block">상담 안내</span>
+                                <p class="text-slate-700 font-medium">하이클래스 앱 메신저 및 사전 예약 후 방문 상담 가능</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-heart-circle-check"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-semibold block">학급 약속</span>
+                                <p class="text-slate-700 font-medium">고운 말 사용하기 · 서로 도와주기 · 규칙 지키기</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100">
+                    <button onclick="openMessageModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-2.5 rounded-xl text-sm transition flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-paper-plane"></i> 훈제쌤에게 한 줄 응원 남기기
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- 알림장 & 주간 시간표 Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- 오늘의 알림장 -->
+            <section id="notice" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm scroll-mt-20">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-clipboard-list text-emerald-600"></i> 오늘의 알림장
+                    </h3>
+                    <span id="todayNoticeDate" class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-medium"></span>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/60 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                        <div>
+                            <p class="text-slate-800 font-medium text-sm">수학익힘책 45~48쪽 풀고 채점해 오기 (틀린 문제는 다시 풀기)</p>
+                            <span class="text-xs text-amber-700 font-semibold mt-1 inline-block">과제</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200/60 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                        <div>
+                            <p class="text-slate-800 font-medium text-sm">내일 체육 수업 준비물: 운동화 착용 및 개인 물병 지참</p>
+                            <span class="text-xs text-emerald-700 font-semibold mt-1 inline-block">준비물</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/60 flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-slate-600 text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                        <div>
+                            <p class="text-slate-800 font-medium text-sm">학교 현장체험학습 희망 조사서 가정통신문 확인 후 제출 (금요일까지)</p>
+                            <span class="text-xs text-slate-500 font-semibold mt-1 inline-block">안내</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 주간 시간표 -->
+            <section id="schedule" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm scroll-mt-20">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-days text-emerald-600"></i> 주간 시간표
+                    </h3>
+                    <span class="text-xs text-slate-400">5학년 1반 표준 시간표</span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-center text-xs sm:text-sm">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700">
+                                <th class="py-2.5 px-1 rounded-l-xl">교시</th>
+                                <th class="py-2.5 px-1">월</th>
+                                <th class="py-2.5 px-1">화</th>
+                                <th class="py-2.5 px-1">수</th>
+                                <th class="py-2.5 px-1">목</th>
+                                <th class="py-2.5 px-1 rounded-r-xl">금</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+                            <tr>
+                                <td class="py-2 text-slate-400 font-normal">1교시</td>
+                                <td>국어</td>
+                                <td>수학</td>
+                                <td>국어</td>
+                                <td>사회</td>
+                                <td>체육</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-slate-400 font-normal">2교시</td>
+                                <td>수학</td>
+                                <td>사회</td>
+                                <td>과학</td>
+                                <td>영어</td>
+                                <td>국어</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-slate-400 font-normal">3교시</td>
+                                <td>사회</td>
+                                <td>체육</td>
+                                <td>음악</td>
+                                <td>수학</td>
+                                <td>실과</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-slate-400 font-normal">4교시</td>
+                                <td>과학</td>
+                                <td>국어</td>
+                                <td>영어</td>
+                                <td>과학</td>
+                                <td>실과</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-slate-400 font-normal">5교시</td>
+                                <td>영어</td>
+                                <td>음악</td>
+                                <td>도덕</td>
+                                <td>미술</td>
+                                <td>창체</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-slate-400 font-normal">6교시</td>
+                                <td>체육</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>미술</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="text-slate-300 font-semibold text-sm">무학초등학교 5학년 1반 (담임: 훈제쌤)</p>
+            <p>본 누리집의 급식 정보는 교육부 나이스(NEIS) 오픈 API를 기반으로 제공됩니다.</p>
+            <p class="text-slate-600">© 2026 MuHak Elementary School Class 5-1. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 응원 메시지 모달 -->
+    <div id="messageModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4">
+            <div class="flex justify-between items-center">
+                <h4 class="text-lg font-bold text-slate-900">훈제쌤에게 응원 한 줄</h4>
+                <button onclick="closeMessageModal()" class="text-slate-400 hover:text-slate-600">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <textarea id="modalText" rows="3" class="w-full border border-slate-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="훈제쌤에게 전하고 싶은 따뜻한 한마디를 적어주세요!"></textarea>
+            <div class="flex justify-end gap-2">
+                <button onclick="closeMessageModal()" class="px-4 py-2 bg-slate-100 text-slate-600 rounded-xl text-sm font-medium">취소</button>
+                <button onclick="submitMessage()" class="px-4 py-2 bg-emerald-600 text-white rounded-xl text-sm font-medium hover:bg-emerald-700">전송하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Custom Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-xl transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50 flex items-center gap-2 text-sm">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toastMsg">메시지가 전송되었습니다!</span>
+    </div>
+
+    <script>
+        // 오늘 날짜 설정 (YYYYMMDD)
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        const todayStr = `${year}-${month}-${day}`;
+
+        // 알림장 날짜 표시
+        document.getElementById('todayNoticeDate').innerText = `${year}년 ${today.getMonth() + 1}월 ${today.getDate()}일 기준`;
+
+        // Date Picker 초기값 설정
+        const mealDateInput = document.getElementById('mealDate');
+        mealDateInput.value = todayStr;
+
+        // 나이스 API 정보 (경남교육청: S10, 무학초등학교 코드)
+        // 무학초등학교 표준학교코드: 9010158 (경남 교육청 S10)
+        const ATPT_OFCDC_SC_CODE = 'S10';
+        const SD_SCHUL_CODE = '9010158';
+
+        // 급식 데이터 불러오기 함수
+        async function fetchMealData() {
+            const selectedDate = mealDateInput.value.replace(/-/g, '');
+            const container = document.getElementById('mealContainer');
+
+            // 로딩 표시
+            container.innerHTML = `
+                <div class="text-center py-8 text-slate-400">
+                    <i class="fa-solid fa-circle-notch fa-spin text-2xl mb-2 text-emerald-600"></i>
+                    <p class="text-sm">급식 정보를 불러오는 중입니다...</p>
+                </div>
+            `;
+
+            try {
+                const url = `https://open.neis.go.kr/hub/mealServiceDietInfo?Type=json&pIndex=1&pSize=5&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}&SD_SCHUL_CODE=${SD_SCHUL_CODE}&MLSV_YMD=${selectedDate}`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.mealServiceDietInfo) {
+                    const mealInfo = data.mealServiceDietInfo[1].row[0];
+                    const menuItems = mealInfo.DDISH_NM.split('<br/>');
+                    const calorie = mealInfo.CAL_INFO;
+
+                    // 메뉴 가공 (알레르기 숫자 정규식 제거 및 깔끔 정리)
+                    const cleanMenu = menuItems.map(item => {
+                        return item.replace(/\([0-9.]+\)/g, '').trim();
+                    });
+
+                    // UI 렌더링
+                    container.innerHTML = `
+                        <div class="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-5">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold px-2.5 py-1 bg-emerald-600 text-white rounded-lg">중식</span>
+                                <span class="text-xs font-semibold text-emerald-800"><i class="fa-solid fa-fire text-amber-500"></i> ${calorie}</span>
+                            </div>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                ${cleanMenu.map(dish => `
+                                    <li class="flex items-center gap-2 text-sm text-slate-700 bg-white p-2.5 rounded-xl border border-slate-100 shadow-2xs">
+                                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                        <span>${dish}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    `;
+                } else {
+                    // 급식 정보가 없을 경우 (주말, 방학, 휴업일 등)
+                    container.innerHTML = `
+                        <div class="text-center py-8 bg-slate-50 rounded-2xl border border-dashed border-slate-200">
+                            <i class="fa-solid fa-utensils-slash text-3xl text-slate-300 mb-2"></i>
+                            <p class="text-sm font-semibold text-slate-600">해당 날짜에는 급식 정보가 없습니다.</p>
+                            <p class="text-xs text-slate-400 mt-1">주말, 공휴일 또는 학교 사정으로 식단이 제공되지 않을 수 있습니다.</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error("Meal API Error:", error);
+                container.innerHTML = `
+                    <div class="text-center py-8 bg-rose-50 rounded-2xl border border-rose-100">
+                        <i class="fa-solid fa-triangle-exclamation text-3xl text-rose-400 mb-2"></i>
+                        <p class="text-sm font-semibold text-rose-700">급식 정보를 불러오는데 실패했습니다.</p>
+                        <p class="text-xs text-rose-500 mt-1">네트워크 상태를 확인하시거나 잠시 후 다시 시도해주세요.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // 스크롤 이동
+        function scrollToMeal() {
+            document.getElementById('meal').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 모달 제어
+        function openMessageModal() {
+            document.getElementById('messageModal').classList.remove('hidden');
+        }
+
+        function closeMessageModal() {
+            document.getElementById('messageModal').classList.add('hidden');
+            document.getElementById('modalText').value = '';
+        }
+
+        function submitMessage() {
+            const val = document.getElementById('modalText').value.trim();
+            if(!val) {
+                showToast('내용을 입력해주세요!');
+                return;
+            }
+            closeMessageModal();
+            showToast('훈제쌤에게 마음이 잘 전달되었습니다! ❤️');
+        }
+
+        // 토스트 알림
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // 초기 실행
+        window.onload = function() {
+            fetchMealData();
+        };
+    </script>
+</body>
+</html>
